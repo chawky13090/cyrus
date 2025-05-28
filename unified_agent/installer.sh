@@ -153,7 +153,7 @@ main() {
     
     # Verify Python version
     if check_command "$PYTHON_CMD"; then
-        CURRENT_PYTHON_VERSION=\$($PYTHON_CMD -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
+        CURRENT_PYTHON_VERSION=\$($PYTHON_CMD -c 'import sys; sys.stdout.write(str(sys.version_info.major) + "." + str(sys.version_info.minor))')
         log_info "Python version: \$CURRENT_PYTHON_VERSION"
         if ! version_check "\$CURRENT_PYTHON_VERSION" "\$MIN_PYTHON_MAJOR.\$MIN_PYTHON_MINOR"; then
             log_error "Python version \$MIN_PYTHON_MAJOR.\$MIN_PYTHON_MINOR or higher is required. Found \$CURRENT_PYTHON_VERSION."
