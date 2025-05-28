@@ -86,15 +86,6 @@ def handle_chat():
         logger.error(f"Unexpected error in chat handler (session {session_id}): {e}", exc_info=True)
         return jsonify({"error": "An internal server error occurred."}), 500
 
-@api_bp.route('/chat/history/<session_id>', methods=['GET'])
-def get_history_route(session_id):
-    if chroma_collection is None:
-        logger.error("CRITICAL: ChromaDB collection is not available for history request.")
-        return jsonify({"error": "Chat database is not initialized."}), 503
-        
-    history = get_conversation_history(chroma_collection, session_id)
-    return jsonify({"session_id": session_id, "history": history})
-
 
 @api_bp.route('/chat/history/<session_id>', methods=['GET'])
 @auth_required
