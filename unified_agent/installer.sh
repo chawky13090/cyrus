@@ -61,7 +61,7 @@ main() {
         exit 0
     fi
 
-    CURRENT_SCRIPT_DIR="\$( cd "\$( dirname "\${BASH_SOURCE[0]}" )" &> /dev/null && pwd )" # Corrected
+    CURRENT_SCRIPT_DIR="\$( cd "\$( dirname "\${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
     if [ "\$(basename "\$CURRENT_SCRIPT_DIR")" != "\$PROJECT_DIR_NAME" ]; then # Corrected
         log_warn "Installer script is expected to be inside the '\$PROJECT_DIR_NAME' directory." # Corrected
     fi
