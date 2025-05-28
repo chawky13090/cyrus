@@ -1,0 +1,2 @@
+# This file is to ensure the backend/logs directory is committed to git.
+# Actual log files will be ignored by .gitignore.

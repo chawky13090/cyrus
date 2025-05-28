@@ -1,0 +1,222 @@
+.chat-page {
+  width: 100%;
+  height: calc(100vh - 100px); /* Adjust based on overall app layout */
+  display: flex;
+  flex-direction: column;
+}
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+.chat-header h3 {
+    margin: 0;
+}
+.session-controls button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.session-controls .logout-btn {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+.chat-error {
+  color: red;
+  padding: 10px;
+  background-color: #ffebee;
+  border: 1px solid red;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.chat-history-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 15px;
+  line-height: 1.4;
+  max-width: 70%;
+}
+.chat-message .sender {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.9em;
+}
+.chat-message.user {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+.chat-message.assistant {
+  background-color: #e9ecef;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+.chat-message.system {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+  background-color: transparent;
+}
+.chat-input-area {
+  display: flex;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+.chat-input-area textarea {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  min-height: 50px;
+  font-family: inherit;
+  font-size: 1em;
+}
+.chat-input-area button {
+  margin-left: 10px;
+  padding: 0 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.chat-input-area button:hover {
+  background-color: #0056b3;
+}
+.chat-input-area button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.netops-tools-placeholder {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+}
+
+/* NetOps Tools Styling */
+.netops-tools-area {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.netops-tool-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+}
+
+.netops-tool-section h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tool-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between form elements */
+}
+
+.tool-form input[type="text"],
+.tool-form input[type="number"],
+.tool-form input[type="password"],
+.tool-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.tool-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.tool-form button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green for tool actions */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.tool-form button:hover {
+  background-color: #218838;
+}
+
+.tool-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.tool-loading,
+.tool-error,
+.tool-result {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.tool-loading {
+  color: #555;
+  font-style: italic;
+}
+
+.tool-error {
+  color: #d32f2f; /* Red for errors */
+  background-color: #ffebee;
+  border: 1px solid #d32f2f;
+}
+
+.tool-result {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  max-height: 300px; /* Limit height for long results */
+  overflow-y: auto; /* Allow scrolling for long results */
+}
+
+.tool-result h5 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.tool-result pre {
+  white-space: pre-wrap; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words */
+  font-size: 0.9em;
+  background-color: #fff; /* Inner background for pre if needed */
+  padding: 8px;
+  border-radius: 3px;
+}

@@ -1,0 +1,11 @@
+Flask>=2.3.0
+Flask-Cors>=4.0.0
+python-dotenv>=1.0.0
+requests>=2.28.0
+gunicorn>=21.0.0 
+chromadb>=0.4.24 
+# ollama package can be added if direct python client is preferred over requests
+# For now, we'll use requests to interact with Ollama's API
+python-nmap>=0.7.1
+paramiko>=3.0.0 
+# netmiko could be an alternative to paramiko for more complex network devices

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+pip-log.txt
+*.egg-info/
+.DS_Store
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json # Optional, depending on preference
+build/ # For React frontend build
+.env.local
+.env.*.local
+
+# Logs
+logs/*.log
+!logs/.gitkeep # Keep the logs directory but ignore its contents
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# ChromaDB storage (if created locally and not in a specific data dir)
+chroma_db_openmanus/
+chroma_db_netops/
+unified_agent_chroma_db/ # Example if db is in root
+backend/unified_agent_chroma_db/ # If specific to backend
